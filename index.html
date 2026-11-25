@@ -97,6 +97,14 @@ nav a{display:inline-block}
 .msg .body p{font-size:1.1rem;max-width:64ch}
 .msg .body p:first-child{font-family:var(--serif);font-size:1.35rem;line-height:1.5}
 .msgsec{padding-bottom:1rem}
+.messages-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;align-items:stretch}
+.message-card{min-width:0;background:var(--tint);border:1px solid var(--line);border-radius:20px;padding:clamp(1.25rem,3vw,2rem);box-shadow:0 12px 32px rgba(10,51,88,.08);position:relative;overflow:hidden}
+.message-card::before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--blue),var(--green),var(--lime))}
+.message-card h2{font-size:clamp(1.5rem,2.5vw,2rem);margin-bottom:1rem}
+.message-card .portrait{max-width:220px}
+.message-card .body p{font-size:1rem;max-width:none}
+.message-card .body p:first-child{font-family:var(--serif);font-size:1.12rem;line-height:1.5}
+
 .gdetails{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem}
 .gbox{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:14px;padding:1.5rem}
 .gbox h3{font-size:1.3rem;margin-bottom:1rem}
@@ -111,7 +119,7 @@ nav a{display:inline-block}
 .legal{display:none;background:var(--tint)}.legal:target{display:block}
 .legal h3{font-size:1.2rem;margin:1.5rem 0 .3rem}.legal p{max-width:70ch}
 footer .flinks{display:flex;gap:1.25rem}footer .flinks a{color:#cfe0ee}
-@media (max-width:820px){.msg,.gdetails,.cgrid{grid-template-columns:1fr}}
+@media (max-width:820px){.msg,.messages-grid,.gdetails,.cgrid{grid-template-columns:1fr}}
 
 header,body::before{transition:background-color .25s,box-shadow .25s,color .25s}
 .logo-dark{display:none}
@@ -242,16 +250,32 @@ html.scrolled nav a[aria-current="page"]{border-bottom-color:var(--blue)}
 </section>
 
 <section class="msgsec" id="message">
-<div class="wrap msg">
-<div><h2>Chairman’s message</h2><img class="portrait" src="images/chairman.jpg" alt="Portrait of the Chairman"><p class="sig">Sayyid Shaheedudheen Baqavi Al Bukhari Shimoga<span>Chairman, Sa’ada Academy</span></p></div>
+<div class="wrap messages-grid">
+<article class="message-card">
+<h2>Chairman’s message</h2>
+<img class="portrait" src="images/chairman.jpg" alt="Portrait of the Chairman">
+<p class="sig">Sayyid Shaheedudheen Baqavi Al Bukhari Shimoga<span>Chairman, Sa’ada Academy</span></p>
 <div class="body">
-<p>Education is not merely the pursuit of knowledge; it is a powerful means of shaping character, nurturing values, and transforming lives. At Sa’ada Academy, we believe that true education goes beyond academic excellence. It is about developing individuals who are morally responsible, socially conscious, and committed to making a positive difference in society.</p>
-<p>Our vision is to build a generation equipped with knowledge, integrity, compassion, and a strong sense of responsibility. Guided by this vision, Sa’ada Academy is dedicated to making quality higher education accessible to the underprivileged, while extending meaningful support to the poor and needy through our comprehensive initiatives and institutional systems.</p>
-<p>We firmly believe that financial circumstances should never become a barrier to education or personal growth. Every individual deserves an opportunity to learn, develop, and realise their full potential. Through our continued efforts, we strive to create opportunities, empower communities, and inspire young minds to become responsible contributors to society.</p>
-<p>As we move forward, we remain committed to our founding ideals and to strengthening our educational and humanitarian initiatives. I sincerely appreciate the dedication of our faculty, staff, supporters, well-wishers, and everyone who contributes to this noble mission.</p>
-<p>Together, let us continue building a future where knowledge enlightens minds, values shape character, and opportunities transform lives.</p>
-<p>With warm regards,<br>Chairman<br>Sa’ada Academy</p>
-</div></div></section>
+<p>Education is more than the pursuit of knowledge; it is about shaping character, nurturing values, and transforming lives. At Sa’ada Academy, we believe true education goes beyond academic excellence by developing morally responsible, compassionate, and socially conscious individuals.</p>
+<p>Our vision is to nurture a generation grounded in knowledge, integrity, and a sense of responsibility. We are committed to making quality higher education accessible to the underprivileged and extending meaningful support to the poor and needy through our educational and humanitarian initiatives.</p>
+<p>We believe that financial circumstances should never stand in the way of education or personal growth. Everyone deserves an opportunity to learn, grow, and fulfil their potential. Through our continued efforts, we strive to empower individuals, support communities, and inspire positive change in society.</p>
+<p>As we move forward, we remain dedicated to our founding ideals and the mission of Sa’ada Academy. I sincerely appreciate the commitment of our faculty, staff, supporters, and well-wishers who make this journey possible.</p>
+<p>Together, let us build a future where knowledge enlightens minds, values shape character, and opportunities transform lives.</p>
+</div>
+</article>
+
+<article class="message-card">
+<h2>General Manager’s message</h2>
+<img class="portrait" src="images/gallery/general-manager.jpg" alt="Portrait of the General Manager">
+<p class="sig">PK Muhammed Shafi<span>General Manager, Sa’ada Academy</span></p>
+<div class="body">
+<p>At Sa’ada Academy, our strength lies in our commitment to education, empowerment, and service to humanity. We strive to create meaningful opportunities that help individuals grow, communities prosper, and future generations lead with knowledge and strong values.</p>
+<p>Every initiative we undertake reflects our belief that even a small effort can make a lasting difference in someone's life. With the dedication of our team and the continued support of our well-wishers, we look forward to reaching more people and creating a positive impact in society.</p>
+<p>Together, let us continue our journey towards a brighter future and success here and hereafter.</p>
+</div>
+</article>
+</div>
+</section>
 
 <section class="inst" id="institutions">
 <div class="wrap">
@@ -285,12 +309,12 @@ html.scrolled nav a[aria-current="page"]{border-bottom-color:var(--blue)}
 </div>
 <a class="btn" href="#contact">Contact us about giving</a>
 <div class="gdetails">
-<div class="gbox"><h3>Bank transfer</h3><dl>
-<dt>Bank</dt><dd>Details will be added</dd>
-<dt>Account name</dt><dd>Details will be added</dd>
-<dt>Account number</dt><dd>Details will be added</dd>
-<dt>IFSC</dt><dd>Details will be added</dd>
-<dt>Branch</dt><dd>Details will be added</dd></dl></div>
+<div class="gbox"><h3>Bank Account Details</h3><dl>
+<dt>Account Name</dt><dd>SA'ADA EDUCATIONAL &amp; CHARITABLE TRUST COMMITTEE</dd>
+<dt>Bank</dt><dd>Axis Bank</dd>
+<dt>Branch</dt><dd>Valanchery</dd>
+<dt>Account Number</dt><dd>922020062552067</dd>
+<dt>IFSC Code</dt><dd>UTIB0004026</dd></dl></div>
 <div class="gbox"><h3>UPI</h3><div class="qr">QR code<br>will be added</div><dl><dt>UPI ID</dt><dd>Details will be added</dd></dl></div>
 </div><p class="gnote">Please use only the details published here, and call us on +91 97454 58598 if you want to confirm them.</p></div></section>
 
