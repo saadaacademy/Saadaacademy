@@ -221,6 +221,16 @@ html.scrolled nav a[aria-current="page"]{border-bottom-color:var(--blue)}
 .gdetails{background:rgba(3,9,16,.78);border:1px solid rgba(255,255,255,.18);box-shadow:0 18px 42px rgba(0,0,0,.45)}
 .gcol-bank{border-right:1px solid rgba(255,255,255,.16)}
 @media (max-width:820px){.gcol-bank{border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}}
+.yt-strip{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line)}
+.yt-strip h3{font-size:1.35rem;margin-bottom:1rem}
+.yt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.yt-card{display:flex;flex-direction:column;text-decoration:none;background:var(--tint);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.yt-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.yt-card span{padding:.8rem 1rem;font-weight:500;font-size:.95rem}
+.yt-more{justify-content:center;align-items:flex-start;padding:1.25rem}
+.yt-more span{padding:0;font-size:1.05rem;color:var(--blue)}
+.yt-more small{color:var(--muted);margin-top:.25rem}
+@media (max-width:820px){.yt-grid{grid-template-columns:1fr}}
 .hvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 @media (prefers-reduced-motion:reduce){.hvid{display:none}.hero{background:#000 url(images/hero-2.jpg) center/cover no-repeat}}
 .hfade{position:absolute;inset:0;z-index:1;background:#000;opacity:0;pointer-events:none;transition:opacity .55s ease}.hfade.on{opacity:1}
@@ -359,7 +369,9 @@ html.scrolled nav a[aria-current="page"]{border-bottom-color:var(--blue)}
 <h2>Milestones</h2>
 <p>Moments from our foundation stone ceremony and community gatherings.</p>
 <div class="gal"><a href="gallery.html"><img src="images/gallery/01-foundation-ceremony.jpg" alt="Scholars and guests seated on stage beneath the Sa’ada Academy foundation stone laying ceremony banner" loading="lazy" style="object-position:center top"></a><a href="gallery.html"><img src="images/gallery/02-foundation-stone-laying.jpg" alt="Men placing the foundation stone at night beneath an Arabic banner" loading="lazy" style="object-position:center center"></a><a href="gallery.html"><img src="images/gallery/03-mosque-foundation-ceremony.jpg" alt="A crowd gathered around the foundation stone beneath a banner for the mosque project" loading="lazy" style="object-position:center center"></a><a href="gallery.html"><img src="images/gallery/04-logo-unveiling.jpg" alt="Scholars holding up the Sa’ada Academy logo on stage" loading="lazy" style="object-position:center 40%"></a><a href="gallery.html"><img src="images/gallery/05-scholars-on-stage.jpg" alt="Scholars and guests on stage with the audience in the foreground" loading="lazy" style="object-position:center 30%"></a></div>
-<p class="galmore"><a class="btn" href="gallery.html">View all photos</a></p></div></section>
+<p class="galmore"><a class="btn" href="gallery.html">View all photos</a></p>
+<div class="yt-strip">...</div>
+</div></section>
 
 <section class="contact" id="contact">
 <div class="wrap">
