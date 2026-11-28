@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أكاديمية السعادة | نجاح في الدنيا والآخرة</title>
+<meta name="description" content="أكاديمية السعادة هي مجموعة مؤسسات تعليمية وخيرية في مالابورام، كيرالا، تسعى لبناء جيل مسؤول أخلاقياً ودعم الفقراء والمحتاجين عبر التعليم العالي والمبادرات الإنسانية.">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#fbfcfa;--ink:#16222d;--muted:#51606d;--line:#d9e1e6;--tint:#eef5fa;--navy:#0a3358;--blue:#0b6fbf;--green:#2db34a;--lime:#8dc63f;
+--serif:"Cairo",system-ui,-apple-system,"Segoe UI",sans-serif;--sans:"Cairo","Roboto",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:0;padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1821;--ink:#e8eef2;--muted:#a3b2bd;--line:#26384a;--tint:#112535;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1821;--ink:#e8eef2;--muted:#a3b2bd;--line:#26384a;--tint:#112535;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.75 var(--sans)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:transparent;z-index:20}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.25;margin:0}
+h2{font-size:clamp(1.85rem,4.2vw,2.6rem);margin-bottom:1rem}
+p{margin:0 0 1rem;max-width:62ch}
+
+header{position:fixed;top:0;left:0;right:0;z-index:10;padding-top:env(safe-area-inset-top,0px);background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,0));color:#fff;transition:background-color .25s,box-shadow .25s,color .25s}
+body::before{transition:background-color .25s,box-shadow .25s,color .25s}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand img{height:44px;width:auto}
+nav ul{display:flex;align-items:center;gap:1.4rem;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-weight:500;padding:.45rem 0;border-bottom:2px solid transparent}
+nav a:hover{border-bottom-color:var(--lime)}
+nav a.give{background:var(--green);color:#06210f;padding:.45rem 1.1rem;border-radius:999px;border:0;font-weight:600}
+nav a.lang-switch{border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:.3rem .85rem;font-size:.88rem;font-family:"Roboto",sans-serif}
+nav a.lang-switch:hover{background:rgba(255,255,255,.15);border-bottom-color:rgba(255,255,255,.55)}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:8px;padding:.45rem .8rem;font:inherit}
+.logo-dark{display:none}
+html.scrolled .logo-dark{display:block}
+html.scrolled .logo-light{display:none}
+html.scrolled header{background:#fff;color:#16222d;box-shadow:0 1px 14px rgba(0,0,0,.14)}
+html.scrolled body::before{background:#fff}
+html.scrolled nav a:hover{border-bottom-color:var(--blue)}
+html.scrolled nav a.lang-switch{border-color:var(--line);color:var(--ink)}
+html.scrolled nav a.lang-switch:hover{background:var(--tint);border-bottom-color:var(--line)}
+html.scrolled .menu{color:#16222d;border-color:rgba(0,0,0,.35)}
+html.scrolled nav{background:#fff}
+@media (min-width:860px){html.scrolled nav{background:transparent}}
+
+.hero{background:#000;color:#fff;min-height:clamp(540px,85vh,780px);position:relative;padding:calc(clamp(4rem,12vw,8rem) + 72px + env(safe-area-inset-top,0px)) 0 clamp(7rem,14vw,10rem)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.7),rgba(0,0,0,.4) 55%,rgba(0,0,0,.75))}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);max-width:16ch;font-weight:600;line-height:1.25;margin-bottom:2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.9rem}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:.85rem 1.6rem;border-radius:999px;border:2px solid transparent}
+.btn.solid{background:#000;color:#fff}
+.btn.solid:hover{background:#222}
+.wavefill{fill:var(--bg)}
+.wave{z-index:2;position:absolute;left:0;right:0;bottom:-1px;width:100%;height:clamp(60px,10vw,120px)}
+
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+.about{display:block;text-align:center}
+.about h2{max-width:none;font-size:clamp(1.5rem,4.4vw,2.45rem);margin:0 auto 1rem;text-wrap:balance}
+.about .lead{font-family:var(--serif);font-size:clamp(1.1rem,1.9vw,1.4rem);line-height:1.65;max-width:48ch;margin:0 auto;text-wrap:balance}
+dl{margin:0;padding-right:1.5rem;border-right:4px solid;border-image:linear-gradient(var(--blue),var(--lime)) 1}
+dt{font-size:.95rem;color:var(--muted)}
+dd{margin:0 0 1.1rem;font-weight:600;font-size:1.1rem}
+
+.msgsec{padding-bottom:1rem}
+.messages-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;align-items:stretch}
+.message-card{min-width:0;background:var(--tint);border:1px solid var(--line);border-radius:20px;padding:clamp(1.25rem,3vw,2rem);box-shadow:0 12px 32px rgba(10,51,88,.08);position:relative;overflow:hidden}
+.message-card::before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--blue),var(--green),var(--lime))}
+.message-card h2{font-size:clamp(1.45rem,2.4vw,1.9rem);margin-bottom:1rem}
+.portrait{display:block;width:100%;max-width:220px;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:14px;margin-top:1.25rem}
+.sig{font-weight:700;margin-top:1rem}.sig span{display:block;color:var(--muted);font-weight:400;font-size:.95rem}
+.message-card .body p{font-size:1.02rem;max-width:none}
+.message-card .body p:first-child{font-family:var(--serif);font-size:1.12rem;line-height:1.65;font-weight:500}
+
+.inst{background:var(--tint)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
+.card,.card:nth-child(n+4){grid-column:auto;aspect-ratio:4/3;position:relative;overflow:hidden;border-radius:16px;cursor:pointer;background:#0a3358}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover img{transform:scale(1.04)}
+.card h3{position:absolute;inset:0;bottom:0;z-index:3;margin:0;padding:0;background:none}
+.card .ttl{display:flex;align-items:flex-end;width:100%;height:100%;margin:0;border:0;padding:1.1rem 1.25rem;text-align:right;font:700 clamp(1.1rem,1.9vw,1.35rem)/1.35 var(--serif);color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.82) 0,rgba(0,0,0,0) 55%);cursor:pointer}
+.card .ttl:focus-visible{outline:3px solid var(--lime);outline-offset:-3px}
+.card .desc{position:absolute;inset:0;z-index:2;margin:0;padding:1.5rem 1.25rem 4.5rem;max-width:none;overflow:auto;background:rgba(10,51,88,.94);color:#fff;font-size:.98rem;line-height:1.65;opacity:0;visibility:hidden;transform:translateY(6%);transition:opacity .3s,transform .3s,visibility .3s}
+.card.open .desc{opacity:1;visibility:visible;transform:none}
+
+.admit .wrap{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between}
+.admit .btn{background:var(--blue);color:#fff}
+.admit .btn:hover{background:var(--navy)}
+
+.give-band{background:radial-gradient(circle at 15% 20%,rgba(11,111,191,.28),transparent 45%),linear-gradient(135deg,#061829,#0a3358);color:#fff;border-top:3px solid var(--lime)}
+.give-band .wrap{display:grid;gap:1.5rem;grid-template-columns:1.5fr 1fr;align-items:center}
+.give-band .sub{font-family:var(--serif);font-weight:600;font-size:clamp(1.2rem,2.4vw,1.55rem);margin:0 0 .75rem;color:#9be15d}
+.give-band p{font-size:1.1rem}
+.give-band .btn{background:#fff;color:#0a3358;justify-self:start}
+
+.gdetails{grid-column:1/-1;max-width:860px;width:100%;margin-inline:auto;display:grid;grid-template-columns:1.15fr 1fr;background:rgba(3,9,16,.78);border:1px solid rgba(255,255,255,.18);border-radius:16px;box-shadow:0 18px 42px rgba(0,0,0,.45);overflow:hidden}
+.gcol{padding:1.5rem 1.75rem}
+.gcol-bank{border-left:1px solid rgba(255,255,255,.16)}
+.gcol h3{font-size:1.28rem;margin-bottom:1rem}
+.gcol dl{border:0;border-image:none;padding:0;margin:0}
+.gcol dt{color:#d9ecf7}
+.gcol dd{font-weight:500;margin-bottom:.7rem}
+.gcol dl dd:last-child{margin-bottom:0}
+.ltr-val{direction:ltr;unicode-bidi:isolate;display:inline-block;font-family:"Roboto",sans-serif}
+.gpay-badge{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;padding:.55rem .95rem;margin-bottom:.85rem;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.gpay-badge img{height:34px;width:auto}
+.qr-slot{margin-top:1rem;width:136px;aspect-ratio:1/1;border:2px dashed rgba(255,255,255,.65);border-radius:12px;background:rgba(255,255,255,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:.88rem;line-height:1.4;color:#fff}
+.qr-slot span{font-size:.78rem;opacity:.85;margin-top:.15rem}
+.qr-slot img{width:100%;height:100%;object-fit:contain;border-radius:10px}
+.gnote{grid-column:1/-1;margin:0;font-size:.95rem!important;opacity:.9;max-width:none;text-align:center}
+
+.gal{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem;margin-top:1.5rem}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block}
+.galmore{margin:1.75rem 0 0}.galmore .btn{background:#000;color:#fff}.galmore .btn:hover{background:#222}
+
+.yt-strip{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line)}
+.yt-strip h3{font-size:1.35rem;margin-bottom:1rem}
+.yt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.yt-card{display:flex;flex-direction:column;text-decoration:none;background:var(--tint);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.yt-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.yt-card span{padding:.8rem 1rem;font-weight:600;font-size:.95rem}
+
+.ccard{background:var(--tint);border:1px solid var(--line);border-radius:20px;padding:clamp(1.5rem,4vw,2.5rem);margin-top:1.5rem}
+.contact .cinfo{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem 2.5rem;margin:0;padding:0;border:0;border-image:none}
+.cinfo dd{margin:0;font-weight:600;font-size:1.05rem}
+.contact dl a{text-decoration:none;border-bottom:1px solid var(--blue)}
+.contact .cbtns{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:.65rem;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.contact .btn{border-color:var(--blue);color:var(--blue)}
+.contact .btn:hover{background:var(--blue);color:#fff}
+.contact .cbtns .btn{padding:.45rem 1.15rem;font-size:.92rem;font-weight:600;border-width:1.5px;transition:transform .15s,filter .15s,background-color .15s,color .15s}
+.contact .cbtns .btn-icon{display:inline-flex;align-items:center;gap:.48rem}
+.btn-icon svg{width:16px;height:16px;flex:0 0 auto}
+.btn-call{background:#0b6fbf;border-color:#0b6fbf;color:#fff}
+.btn-wa{background:#25D366;border-color:#25D366;color:#fff}
+.btn-mail{background:#EA4335;border-color:#EA4335;color:#fff}
+.btn-fb{background:#1877F2;border-color:#1877F2;color:#fff}
+.btn-yt{background:#FF0000;border-color:#FF0000;color:#fff}
+.contact .cbtns .btn:hover{filter:brightness(.92);transform:translateY(-1px)}
+
+.legal{display:none;background:var(--tint)}.legal:target{display:block}
+.legal h3{font-size:1.2rem;margin:1.5rem 0 .3rem}.legal p{max-width:70ch}
+
+footer{background:#000;color:#cfe0ee;padding:2.5rem 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
+footer img{height:48px;width:auto}
+footer p{margin:0;font-size:.95rem}
+footer .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;align-items:start;padding-bottom:2rem;margin-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.18);color:#fff;font-weight:600}
+footer .facts span{display:block;font-size:.9rem;font-weight:400;color:#9fb6c8;margin-bottom:.15rem}
+footer .flinks{display:flex;gap:1.25rem}footer .flinks a{color:#cfe0ee}
+
+.hvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hfade{position:absolute;inset:0;z-index:1;background:#000;opacity:0;pointer-events:none;transition:opacity .55s ease}.hfade.on{opacity:1}
+
+@media (max-width:860px){
+.menu{display:block}
+nav{position:absolute;left:0;right:0;top:calc(72px + env(safe-area-inset-top,0px));background:var(--navy);display:none;padding:1rem 1.25rem 1.5rem;border-top:1px solid rgba(255,255,255,.15)}
+nav.open{display:block}
+nav ul{flex-direction:column;align-items:flex-start;gap:.65rem}
+nav a{display:inline-block}
+.give-band .wrap,.messages-grid,.cards,.gdetails,.yt-grid,.contact .cinfo{grid-template-columns:1fr}
+.card,.card:nth-child(n+4){grid-column:auto;aspect-ratio:4/3}
+.gcol-bank{border-left:0;border-bottom:1px solid rgba(255,255,255,.16)}
+.gal{grid-template-columns:1fr 1fr}
+footer .facts{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+header,body::before,.card img,.card .desc,.hfade,.contact .cbtns .btn{transition:none}
+.hvid,.hfade{display:none}
+.hero{background:#000 url(images/hero-2.jpg) center/cover no-repeat}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap bar">
+<a class="brand" href="#home" aria-label="أكاديمية السعادة - الصفحة الرئيسية"><img class="logo-light" src="images/logo-white.png" alt="أكاديمية السعادة"><img class="logo-dark" src="images/logo-dark.png" alt="أكاديمية السعادة"></a>
+<button class="menu" aria-expanded="false" aria-controls="nav">القائمة</button>
+<nav id="nav" aria-label="القائمة الرئيسية">
+<ul>
+<li><a href="#home">الرئيسية</a></li>
+<li><a href="#about">من نحن</a></li>
+<li><a href="#institutions">المؤسسات</a></li>
+<li><a href="gallery.html">المعرض</a></li>
+<li><a href="#admission">القبول</a></li>
+<li><a href="#contact">تواصل معنا</a></li>
+<li><a class="give" href="#give">ساهم معنا</a></li>
+<li><a class="lang-switch" href="index.html" lang="en">English</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main id="home">
+<div class="hero">
+<video class="hvid" autoplay muted loop playsinline preload="metadata" poster="images/hero-2.jpg" aria-hidden="true"><source src="images/hero.mp4" type="video/mp4"></video><div class="hfade" aria-hidden="true"></div>
+<div class="wrap">
+<h1>نجاح في الدنيا والآخرة</h1>
+<div class="btns">
+<a class="btn solid" href="#institutions">استكشف مؤسساتنا</a>
+</div>
+</div>
+<svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#3fa9e0"/><stop offset=".5" stop-color="#2db34a"/><stop offset="1" stop-color="#8dc63f"/></linearGradient></defs>
+<path d="M0 78C180 18 330 18 520 62S900 112 1100 62 1340 20 1440 52V120H0Z" fill="url(#g)" opacity=".9"/>
+<path d="M0 100C200 56 380 60 560 92S940 118 1120 84 1360 54 1440 80V120H0Z" class="wavefill"/>
+</svg>
+</div>
+
+<section id="about">
+<div class="wrap about">
+<h2>بناء جيلٍ يجمع بين العلم والأخلاق والرسالة</h2>
+<p class="lead">تعمل أكاديمية السعادة على تنشئة جيلٍ واعٍ ومسؤول أخلاقياً، والنهوض بالفقراء والمحتاجين من خلال توفير التعليم العالي والدعم المجتمعي عبر منظومتها التعليمية والإنسانية المتكاملة.</p>
+</div>
+</section>
+
+<section class="msgsec" id="message">
+<div class="wrap messages-grid">
+<article class="message-card">
+<h2>كلمة رئيس الأكاديمية</h2>
+<img class="portrait" src="images/chairman.jpg" alt="صورة رئيس أكاديمية السعادة">
+<p class="sig">السيد شهيد الدين الباقوي البخاري شيموغا<span>رئيس أكاديمية السعادة</span></p>
+<div class="body">
+<p>إن التعليم يتجاوز مجرد تحصيل المعرفة؛ فهو بناءٌ للشخصية، وغرسٌ للقيم، وصناعةٌ للتغيير الإيجابي في حياة الإنسان. في أكاديمية السعادة، نتطلع إلى ما هو أبعد من التفوق الأكاديمي لتنشئة جيلٍ يتحلى بالمسؤولية الأخلاقية والرحمة والنزاهة، مع إتاحة التعليم العالي الجيد والدعم الإنساني للفئات المحتاجة والأقل حظاً.</p>
+<p>ينبغي ألا تقف الصعوبات المالية عائقاً أمام التعلم أو النمو الشخصي؛ فلكل فرد الحق في تحقيق طموحاته وإمكاناته. وانطلاقاً من مبادئنا التأسيسية، نواصل التزامنا بتمكين الأفراد والارتقاء بالمجتمعات وإحداث أثر إيجابي مستدام.</p>
+<p>أتقدم بخالص الشكر والتقدير لأعضاء الهيئة التدريسية والإدارية والداعمين والمحبين الذين يجعلون هذه المسيرة ممكنة. معاً نبني مستقبلاً ينير فيه العلم العقول، وتصوغ القيم الشخصية، وتفتح الفرص آفاقاً جديدة للحياة.</p>
+</div>
+</article>
+
+<article class="message-card">
+<h2>كلمة المدير العام</h2>
+<img class="portrait" src="images/gallery/general-manager.jpg" alt="صورة المدير العام لأكاديمية السعادة">
+<p class="sig">بي كي محمد شافعي<span>المدير العام، أكاديمية السعادة</span></p>
+<div class="body">
+<p>تكمن قوتنا في أكاديمية السعادة في التزامنا الراسخ بالتعليم والتمكين وخدمة الإنسانية. ونسعى جاهدين لخلق فرصٍ هادفة تساعد الأفراد على النمو، والمجتمعات على الازدهار، والأجيال القادمة على القيادة بالعلم والقيم الأصيلة.</p>
+<p>تعكس كل مبادرة نطلقها إيماننا بأن أي جهد مخلص — مهما كان بسيطاً — قادر على إحداث فرق دائم في حياة إنسان. وبفضل تفاني فريق عملنا واستمرار دعم المحسنين والمحبين، نتطلع إلى الوصول إلى شرائح أوسع وتحقيق أثر إيجابي ملموس في المجتمع.</p>
+<p>فلنواصل معاً مسيرتنا نحو مستقبل أكثر إشراقاً ونجاحٍ في الدنيا والآخرة.</p>
+</div>
+</article>
+</div>
+</section>
+
+<section class="inst" id="institutions">
+<div class="wrap">
+<h2>مؤسساتنا</h2>
+<div class="cards">
+<article class="card"><img src="images/masjidu-ssaada.jpg" alt="مسجد السعادة" style="object-position:center 45%" loading="lazy"><h3><button type="button" class="ttl" aria-expanded="false">مسجد السعادة</button></h3><p class="desc">مركز للعبادة والارتقاء الروحي وتآلف المجتمع، يحتضن الصلوات وحلقات العلم الشرعي ويعزز القيم الإسلامية السامية.</p></article>
+<article class="card"><img src="images/dawa-college.jpg" alt="طلاب كلية الدعوة الإسلامية" style="object-position:center 30%" loading="lazy"><h3><button type="button" class="ttl" aria-expanded="false">كلية الدعوة الإسلامية</button></h3><p class="desc">مؤسسة أكاديمية تُعنى بإعداد علماء راسخين ودعاة مسؤولين من خلال الدراسات الإسلامية الشاملة والتربية الروحية والتأهيل الدعوي.</p></article>
+<article class="card"><img src="images/madrasathu-ssada.jpg" alt="مبنى مدرسة السعادة" style="object-position:center 50%" loading="lazy"><h3><button type="button" class="ttl" aria-expanded="false">مدرسة السعادة</button></h3><p class="desc">مؤسسة تربوية مخصصة لتنشئة النشء على التربية الإسلامية والقيم الأخلاقية وبناء الشخصية، لإعداد جيل يهتدي بالعلم والإيمان وحسن الخلق.</p></article>
+<article class="card"><img src="images/women-institute.jpg" alt="طالبات في معهد تمكين المرأة" style="object-position:center 30%" loading="lazy"><h3><button type="button" class="ttl" aria-expanded="false">معهد تمكين المرأة</button></h3><p class="desc">يلتزم بتمكين المرأة عبر التعليم وتنمية المهارات والتطوير الشخصي والوعي المجتمعي، لتكون عنصراً فاعلاً ومستقلاً وواثقاً في بناء المجتمع.</p></article>
+<article class="card"><img src="images/hope-shore.jpg" alt="أطفال يقرأون معاً في مبادرة شاطئ الأمل" style="object-position:center 30%" loading="lazy"><h3><button type="button" class="ttl" aria-expanded="false">شاطئ الأمل – لرعاية الأيتام والأرامل</button></h3><p class="desc">مبادرة إنسانية تُعنى برعاية الأيتام والأرامل عبر الكفالة التعليمية والمساعدات المالية والدعم الأساسي، بما يضمن لهم حياة كريمة ومستقرة.</p></article>
+<article class="card"><img src="images/vadee-hasan.jpg" alt="معلم يوجه الطلاب في وادي حسن - مركز التميز" style="object-position:center 25%" loading="lazy"><h3><button type="button" class="ttl" aria-expanded="false">وادي حسن – مركز التميز</button></h3><p class="desc">يركز على التفوق الأكاديمي والتعليم المنهجي والتنمية الشاملة للطلاب، لإعداد متعلمين يحققون أعلى مستويات المعرفة والقيادة.</p></article>
+<article class="card"><img src="images/hifz-quran-college.jpg" alt="طلاب ومعلم في كلية تحفيظ القرآن" style="object-position:center 25%" loading="lazy"><h3><button type="button" class="ttl" aria-expanded="false">كلية تحفيظ القرآن الكريم</button></h3><p class="desc">تُعنى بتوجيه الطلاب نحو حفظ القرآن الكريم وتلاوته وتدبر معانيه وفق أحكام التجويد المتقنة والانضباط والتربية الروحية.</p></article>
+<article class="card"><img src="images/mmrc.jpg" alt="كتب ومكتبة في مركز محمد مسليار للأبحاث" style="object-position:center 45%" loading="lazy"><h3><button type="button" class="ttl" aria-expanded="false">مركز محمد مسليار للأبحاث (MMRC)</button></h3><p class="desc">منارة للدراسات العلمية والبحث الأرشيفي والتقصي الفكري، لحفظ التراث وتطوير البحث الرصين في العلوم الإسلامية والاجتماعية.</p></article>
+<article class="card"><img src="images/santhwanam-care.jpg" alt="الرعاية الإنسانية في مركز سانثوانام للرعاية" style="object-position:center 40%" loading="lazy"><h3><button type="button" class="ttl" aria-expanded="false">مركز سانثوانام للرعاية</button></h3><p class="desc">مبادرة رعاية إنسانية رحيمة تقدم المساندة والإغاثة والرعاية الحانية للأفراد والأسر ممن يواجهون المرض أو الشدائد أو الحاجة.</p></article>
+</div>
+</div>
+</section>
+
+<section class="admit" id="admission">
+<div class="wrap">
+<div>
+<h2>القبول والتسجيل</h2>
+<p>هل ترغب في الالتحاق بإحدى مؤسساتنا؟ تواصل معنا وسنرشدك في جميع خطوات التسجيل.</p>
+</div>
+<a class="btn" href="#contact">استفسر عن القبول</a>
+</div>
+</section>
+
+<section class="give-band" id="give">
+<div class="wrap">
+<div>
+<h2>ادعم أكاديمية السعادة</h2>
+<h3 class="sub">اصنع أملاً بدعمك وعطائك</h3>
+<p>يسهم دعمكم الكريم في تمكين أكاديمية السعادة من مواصلة رسالتها في تقديم التعليم الجيد، وخدمة المجتمعات، ومساندة المحتاجين. معاً نصنع الفرص ونبني مجتمعاً أفضل.</p>
+</div>
+<a class="btn" href="#contact">تواصل معنا بشأن التبرع</a>
+<div class="gdetails">
+<div class="gcol gcol-bank">
+<h3>تفاصيل الحساب البنكي</h3>
+<dl>
+<dt>اسم الحساب</dt><dd><span class="ltr-val">SA'ADA EDUCATIONAL &amp; CHARITABLE TRUST COMMITTEE</span></dd>
+<dt>البنك</dt><dd>بنك أكسيس (<span class="ltr-val">Axis Bank</span>)</dd>
+<dt>الفرع</dt><dd>فالانشيري (<span class="ltr-val">Valanchery</span>)</dd>
+<dt>رقم الحساب</dt><dd><span class="ltr-val">922020062552067</span></dd>
+<dt>رمز <span class="ltr-val">IFSC</span></dt><dd><span class="ltr-val">UTIB0004026</span></dd>
+</dl>
+</div>
+<div class="gcol gcol-gpay">
+<h3>Google Pay</h3>
+<div class="gpay-badge"><img src="images/gpay.png" alt="Google Pay"></div>
+<dl>
+<dt>رقم <span class="ltr-val">Google Pay</span></dt>
+<dd><span class="ltr-val">97 4545 8598</span></dd>
+</dl>
+<div class="qr-slot" aria-label="مساحة رمز QR">رمز QR<br><span>قريباً</span></div>
+</div>
+</div>
+<p class="gnote">يرجى استخدام البيانات المنشورة هنا فقط، والاتصال بنا على الرقم <span class="ltr-val">+91 97454 58598</span> في حال رغبتكم في تأكيدها.</p>
+</div>
+</section>
+
+<section id="gallery"><div class="wrap">
+<h2>محطات وإنجازات</h2>
+<p>لقطات من حفل وضع حجر الأساس واللقاءات والفعاليات المجتمعية.</p>
+<div class="gal"><a href="gallery.html"><img src="images/gallery/01-foundation-ceremony.jpg" alt="العلماء والضيوف على المنصة في حفل وضع حجر الأساس لأكاديمية السعادة" loading="lazy" style="object-position:center top"></a><a href="gallery.html"><img src="images/gallery/02-foundation-stone-laying.jpg" alt="وضع حجر الأساس ليلاً" loading="lazy" style="object-position:center center"></a><a href="gallery.html"><img src="images/gallery/03-mosque-foundation-ceremony.jpg" alt="الحضور حول حجر الأساس لمشروع المسجد" loading="lazy" style="object-position:center center"></a><a href="gallery.html"><img src="images/gallery/04-logo-unveiling.jpg" alt="تدشين شعار أكاديمية السعادة على المنصة" loading="lazy" style="object-position:center 40%"></a><a href="gallery.html"><img src="images/gallery/05-scholars-on-stage.jpg" alt="العلماء والضيوف على المنصة مع الحضور" loading="lazy" style="object-position:center 30%"></a></div>
+<p class="galmore"><a class="btn" href="gallery.html">عرض جميع الصور</a></p>
+<div class="yt-strip">
+<h3>شاهد على يوتيوب</h3>
+<div class="yt-grid">
+<a class="yt-card" href="http://www.youtube.com/watch?v=q4y_2JlKZ4g" target="_blank" rel="noopener">
+<img src="https://i.ytimg.com/vi/q4y_2JlKZ4g/hqdefault.jpg" alt="الحفل الختامي للذكرى الأربعين للدرس في فينغاد" loading="lazy">
+<span>الحفل الختامي للذكرى الأربعين للدرس (فينغاد)</span>
+</a>
+<a class="yt-card" href="http://www.youtube.com/watch?v=vb0NXCUGT30" target="_blank" rel="noopener">
+<img src="https://i.ytimg.com/vi/vb0NXCUGT30/hqdefault.jpg" alt="الحفل الافتتاحي للذكرى الأربعين للدرس في فينغاد" loading="lazy">
+<span>الحفل الافتتاحي للذكرى الأربعين للدرس (فينغاد)</span>
+</a>
+<a class="yt-card" href="http://www.youtube.com/watch?v=M9_sk2eD0QE" target="_blank" rel="noopener">
+<img src="https://i.ytimg.com/vi/M9_sk2eD0QE/hqdefault.jpg" alt="مسيرة المولد النبوي في سعادة نغر – فينغاد ميلموري" loading="lazy">
+<span>مسيرة المولد النبوي – سعادة نغر، فينغاد ميلموري (29 أغسطس 2026)</span>
+</a>
+</div>
+</div>
+</div></section>
+
+<section class="contact" id="contact">
+<div class="wrap">
+<h2>تواصل معنا</h2>
+<div class="ccard">
+<dl class="cinfo">
+<div><dt>العنوان</dt><dd>سعادة نغر، فينغاد ميلموري، مالابورام، كيرالا</dd></div>
+<div><dt>الهاتف والواتساب</dt><dd><a href="tel:+919745458598"><span class="ltr-val">+91 97454 58598</span></a></dd></div>
+<div><dt>البريد الإلكتروني</dt><dd><a href="mailto:saadaacademy313@gmail.com"><span class="ltr-val">saadaacademy313@gmail.com</span></a></dd></div>
+<div><dt>ساعات العمل</dt><dd>من 9 صباحاً إلى 6 مساءً</dd></div>
+</dl>
+<div class="btns cbtns">
+<a class="btn btn-icon btn-call" href="tel:+919745458598"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.27.2 2.48.57 3.6a1 1 0 0 1-.24 1l-2.23 2.2Z" fill="currentColor"/></svg><span>اتصل بنا</span></a>
+<a class="btn btn-icon btn-wa" href="https://wa.me/919745458598" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.07 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.59 5.96L0 24l6.3-1.65a11.86 11.86 0 0 0 5.77 1.47h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.17-3.47-8.43ZM12.08 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.25c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 7c0 5.45-4.44 9.89-9.89 9.89Zm5.42-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48a9 9 0 0 1-1.66-2.06c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.11 3.22 5.11 4.52.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z" fill="currentColor"/></svg><span>واتساب</span></a>
+<a class="btn btn-icon btn-mail" href="mailto:saadaacademy313@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H4Zm0 2h16v.24l-8 5-8-5V8Zm0 8v-5.38l7.44 4.65a1 1 0 0 0 1.12 0L20 10.62V16H4Z" fill="currentColor"/></svg><span>راسلنا</span></a>
+<a class="btn btn-icon btn-fb" href="https://www.facebook.com/share/1CoebiAKzt/?mibextid=wwXIfr" rel="noopener" aria-label="فيسبوك"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z" fill="currentColor"/></svg><span>فيسبوك</span></a>
+<a class="btn btn-icon btn-yt" href="https://www.youtube.com/@saadaacademy8933" target="_blank" rel="noopener" aria-label="يوتيوب"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.12C19.54 3.57 12 3.57 12 3.57s-7.54 0-9.4.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.12c1.86.51 9.4.51 9.4.51s7.54 0 9.4-.51a3 3 0 0 0 2.1-2.12A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.57V8.43L15.82 12 9.6 15.57Z" fill="currentColor"/></svg><span>يوتيوب</span></a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="legal" id="privacy"><div class="wrap">
+<h2>سياسة الخصوصية</h2><p>آخر تحديث: 4 نوفمبر 2026</p>
+<h3>من نحن</h3><p>أكاديمية السعادة، سعادة نغر، فينغاد ميلموري، مالابورام، كيرالا. البريد الإلكتروني: <span class="ltr-val">saadaacademy313@gmail.com</span>. الهاتف: <span class="ltr-val">+91 97454 58598</span>.</p>
+<h3>ما نجمعه من معلومات</h3><p>لا يتضمن هذا الموقع حسابات مستخدمين أو نماذج تسجيل أو بوابات دفع إلكتروني، ولا يطلب منك إدخال بيانات شخصية. وعند تواصلك معنا عبر الهاتف أو واتساب أو البريد الإلكتروني، فإننا نستقبل المعلومات التي تختار مشاركتها معنا مثل الاسم ورقم الهاتف والبريد الإلكتروني ونص الرسالة، وقد تتضمن استفسارات القبول بيانات عن المتقدم.</p>
+<h3>كيف نستخدم المعلومات</h3><p>نستخدم بياناتك للرد على استفساراتك، ومعالجة طلبات القبول، وتزويدك بالمعلومات حول مؤسساتنا، وتأكيد التبرعات، والاحتفاظ بالسجلات التي يقتضيها القانون. ولا نقوم ببيع أو تأجير أي بيانات شخصية.</p>
+<h3>مشاركة المعلومات</h3><p>لا نشارك المعلومات إلا عندما يفرض القانون ذلك، أو مع القائمين على إدارة مؤسساتنا مع التزامهم التام بالسرية.</p>
+<h3>الأطراف الثالثة</h3><p>يحمل هذا الموقع خطوطاً من خدمة <span class="ltr-val">Google Fonts</span>، مما يعني اتصال متصفحك بخوادم جوجل. كما تؤدي الروابط الخاصة بفيسبوك وواتساب ويوتيوب إلى خدمات خارجية تخضع لسياسات الخصوصية الخاصة بها. ولا نستخدم أي أدوات إعلانية أو تتبع على هذا الموقع.</p>
+<h3>الاحتفاظ بالمعلومات</h3><p>نحتفظ بالمعلومات فقط للمدة اللازمة لتحقيق الغرض الذي قُدمت من أجله، أو وفق ما يقتضيه القانون.</p>
+<h3>الأطفال</h3><p>يرجى تقديم الاستفسارات المتعلقة بالأطفال من خلال أحد الوالدين أو ولي الأمر.</p>
+<h3>خياراتك</h3><p>يمكنك طلب الاطلاع على بياناتك المحفوظة لدينا أو تصحيحها أو حذفها عبر مراسلتنا على <span class="ltr-val">saadaacademy313@gmail.com</span>.</p>
+<h3>التعديلات</h3><p>قد نقوم بتحديث هذه السياسة من وقت لآخر، ويوضح التاريخ أعلاه أحدث نسخة معتمدة.</p>
+<p><a href="#contact">إغلاق</a></p></div></section>
+
+<section class="legal" id="terms"><div class="wrap">
+<h2>شروط الاستخدام</h2><p>آخر تحديث: 4 نوفمبر 2026</p>
+<h3>حول هذا الموقع</h3><p>يوفر هذا الموقع معلومات تعريفية حول أكاديمية السعادة ومؤسساتها، وباستخدامك للموقع فإنك توافق على هذه الشروط.</p>
+<h3>دقة المعلومات</h3><p>نحرص على دقة المعلومات المنشورة، غير أن البرامج والمواعيد وشروط الأهلية والرسوم قد تخضع للتغيير؛ لذا يرجى التأكد من مكتبنا قبل الاعتماد عليها.</p>
+<h3>التبرعات</h3><p>التبرعات طوعية بالكامل. يرجى استخدام البيانات البنكية أو تفاصيل الدفع المنشورة على هذا الموقع حصراً، والاتصال على الرقم <span class="ltr-val">+91 97454 58598</span> للتأكد منها. ولا تتحمل الأكاديمية أي مسؤولية عن تحويلات تُرسل إلى أي حساب آخر.</p>
+<h3>المحتوى وحقوق الملكية</h3><p>الاسم والشعار والنصوص والصور المنشورة في هذا الموقع مملوكة لأكاديمية السعادة أو مستخدمة بإذن، ولا يجوز نسخها أو إعادة استخدامها دون إذن خطي مسبق، مع إمكانية مشاركة رابط الموقع.</p>
+<h3>الاستخدام السليم</h3><p>يرجى عدم إساءة استخدام الموقع أو تعطيله أو انتحال صفة أكاديمية السعادة أو أي من منسوبيها.</p>
+<h3>المواقع الخارجية</h3><p>يحتوي الموقع على روابط لخدمات خارجية مثل فيسبوك وواتساب ويوتيوب، ولا نتحكم في محتواها أو سياساتها.</p>
+<h3>حدود المسؤولية</h3><p>يُقدَّم هذا الموقع بصورته الحالية، وإلى الحد الذي يسمح به القانون لا تتحمل أكاديمية السعادة أي مسؤولية عن أي خسائر تنشأ عن استخدامه.</p>
+<h3>القانون الحاكم</h3><p>تخضع هذه الشروط لقوانين جمهورية الهند، وتختص محاكم مالابورام بولاية كيرالا بالنظر في أي نزاع يتعلق بها.</p>
+<h3>التعديلات والتواصل</h3><p>قد نقوم بتحديث هذه الشروط. للاستفسار: <span class="ltr-val">saadaacademy313@gmail.com</span>.</p>
+<p><a href="#contact">إغلاق</a></p></div></section>
+</main>
+
+<footer>
+<div class="wrap facts">
+<div><span>تاريخ التأسيس</span>17 أكتوبر 2017</div>
+<div><span>الموقع</span>سعادة نغر، فينغاد ميلموري، مالابورام</div>
+<div><span>رئيس الأكاديمية</span>السيد شهيد الدين الباقوي البخاري شيموغا</div>
+<div><span>المدير العام</span>بي كي محمد شافعي</div>
+</div>
+<div class="wrap">
+<img src="images/logo-white.png" alt="أكاديمية السعادة">
+<p>© 2017–2026 أكاديمية السعادة، مالابورام، كيرالا</p>
+<p class="flinks"><a href="#privacy">سياسة الخصوصية</a> <a href="#terms">شروط الاستخدام</a> <a href="https://www.youtube.com/@saadaacademy8933" target="_blank" rel="noopener">يوتيوب</a> <a href="index.html" lang="en">English</a></p>
+</div>
+</footer>
+
+<script>
+(function(){
+var d=document.documentElement,b=document.querySelector('.menu'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+document.querySelectorAll('.card').forEach(function(c){var t=c.querySelector('.ttl');t.addEventListener('click',function(){var o=c.classList.toggle('open');t.setAttribute('aria-expanded',o)})});
+if(document.body.hasAttribute('data-solid')){d.classList.add('scrolled')}
+else{var s=function(){d.classList.toggle('scrolled',window.scrollY>40)};window.addEventListener('scroll',s,{passive:true});s()}
+var v=document.querySelector('.hvid'),fd=document.querySelector('.hfade');if(v){v.muted=true;var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});if(fd){(function tick(){var t=v.duration;if(t&&!v.paused){fd.classList.toggle('on',t-v.currentTime<0.55)}requestAnimationFrame(tick)})()}}
+})();
+</script>
+</body>
+</html>
