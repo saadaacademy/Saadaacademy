@@ -162,6 +162,10 @@ footer .facts{grid-template-columns:1fr 1fr}
 @media (prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
 header,body::before,.card img,.card .desc,.hfade{transition:none}
+nav a.lang-switch{border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:.3rem .85rem;font-size:.88rem}
+nav a.lang-switch:hover{background:rgba(255,255,255,.15);border-bottom-color:rgba(255,255,255,.55)}
+html.scrolled nav a.lang-switch{border-color:var(--line);color:var(--ink)}
+html.scrolled nav a.lang-switch:hover{background:var(--tint);border-bottom-color:var(--line)}
 .hvid,.hfade{display:none}
 .hero{background:#000 url(images/hero-2.jpg) center/cover no-repeat}
 }
@@ -181,6 +185,7 @@ header,body::before,.card img,.card .desc,.hfade{transition:none}
 <li><a href="#admission">Admission</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a class="give" href="#give">Give</a></li>
+<li><a class="lang-switch" href="ar.html" lang="ar">العربية</a></li>
 </ul>
 </nav>
 </div>
