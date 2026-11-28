@@ -155,9 +155,12 @@ footer .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;align-
 footer .facts span{display:block;font-size:.9rem;font-weight:400;color:#9fb6c8;margin-bottom:.15rem}
 footer .flinks{display:flex;gap:1.25rem}footer .flinks a{color:#cfe0ee}
 
-.about-detail[hidden]{display:none}
 .about-detail{max-width:920px;margin:2rem auto 0;text-align:left}
-.about-drop-lead{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--navy);margin:0 0 1.4rem;max-width:none}
+.about-detail[hidden]{display:none!important}
+.about-detail-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;margin:0 0 1.4rem}
+.about-drop-lead{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--navy);margin:0;max-width:none}
+.about-close{background:none;border:1.5px solid var(--blue);color:var(--blue);border-radius:999px;padding:.35rem .95rem;font:500 .88rem var(--sans);cursor:pointer}
+.about-close:hover{background:var(--blue);color:#fff}
 :root[data-theme="dark"] .about-drop-lead{color:#9be15d}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .about-drop-lead{color:#9be15d}}
 .tl-boxes{position:relative;display:grid;gap:1.5rem}
@@ -250,7 +253,10 @@ header,body::before,.card img,.card .desc,.hfade,.contact .cbtns .btn,.nav-dd-ch
 <p class="lead">Sa’ada Academy moulds a morally responsible generation and uplifts the poor and needy by providing higher education and support through its extensive systems.</p>
 
 <div id="about-melmuri" class="about-detail" hidden>
-  <h3 class="about-drop-lead">മേൽമുറി ഗ്രാമം; നന്മയുടെ വിളനിലം</h3>
+  <div class="about-detail-head">
+    <h3 class="about-drop-lead">മേൽമുറി ഗ്രാമം; നന്മയുടെ വിളനിലം</h3>
+    <button type="button" class="about-close">Close</button>
+  </div>
   <div class="tl-boxes">
     <article class="tl-box">
       <div class="tl-badge" aria-hidden="true">
@@ -300,7 +306,10 @@ header,body::before,.card img,.card .desc,.hfade,.contact .cbtns .btn,.nav-dd-ch
 </div>
 
 <div id="about-mammad-musliyar" class="about-detail" hidden>
-  <h3 class="about-drop-lead">ശൈഖുനാ മമ്മദ് മുസ്ലിയാർ; മേൽമുറി ദേശത്തിന്റെ സൗഭാഗ്യം </h3>
+  <div class="about-detail-head">
+    <h3 class="about-drop-lead">ശൈഖുനാ മമ്മദ് മുസ്ലിയാർ; മേൽമുറി ദേശത്തിന്റെ സൗഭാഗ്യം - മുഹമ്മദ് ആഷിഖ് അദനി</h3>
+    <button type="button" class="about-close">Close</button>
+  </div>
   <div class="tl-boxes">
     <article class="tl-box">
       <div class="tl-badge" aria-hidden="true">
@@ -533,10 +542,19 @@ header,body::before,.card img,.card .desc,.hfade,.contact .cbtns .btn,.nav-dd-ch
 var d=document.documentElement,b=document.querySelector('.menu'),n=document.getElementById('nav');
 b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 var navDd=document.querySelector('.nav-dd'),navDdBtn=document.querySelector('.nav-dd-btn');
+var aboutDetails=document.querySelectorAll('.about-detail');
+function closeAboutDetails(){
+aboutDetails.forEach(function(el){el.hidden=true});
+}
 function openAboutTarget(hash){
+closeAboutDetails();
 var target=hash==='#about-mammad-musliyar'?document.getElementById('about-mammad-musliyar'):document.getElementById('about-melmuri');
 if(target){target.hidden=false;setTimeout(function(){target.scrollIntoView({behavior:'smooth',block:'start'})},30)}
 }
+closeAboutDetails();
+document.querySelectorAll('.about-close').forEach(function(btn){
+btn.addEventListener('click',function(){closeAboutDetails()});
+});
 if(navDd&&navDdBtn){
 navDdBtn.addEventListener('click',function(e){e.stopPropagation();var o=navDd.classList.toggle('open');navDdBtn.setAttribute('aria-expanded',o)});
 navDd.querySelectorAll('.nav-dd-menu a').forEach(function(a){
@@ -544,7 +562,7 @@ a.addEventListener('click',function(e){e.preventDefault();var h=a.getAttribute('
 });
 document.addEventListener('click',function(e){if(!navDd.contains(e.target)){navDd.classList.remove('open');navDdBtn.setAttribute('aria-expanded','false')}});
 }
-n.addEventListener('click',function(e){if(e.target.tagName==='A'&&!e.target.closest('.nav-dd-menu')){n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'&&!e.target.closest('.nav-dd-menu')){closeAboutDetails();n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
 document.querySelectorAll('.card').forEach(function(c){var t=c.querySelector('.ttl');t.addEventListener('click',function(){var o=c.classList.toggle('open');t.setAttribute('aria-expanded',o)})});
 if(document.body.hasAttribute('data-solid')){d.classList.add('scrolled')}
 else{var s=function(){d.classList.toggle('scrolled',window.scrollY>40)};window.addEventListener('scroll',s,{passive:true});s()}
