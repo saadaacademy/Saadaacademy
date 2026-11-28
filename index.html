@@ -6,10 +6,10 @@
 <title>Sa’ada Academy | Success here and hereafter</title>
 <meta name="description" content="Sa’ada Academy is a group of institutions in Malappuram, Kerala, shaping a morally responsible generation and supporting the poor and needy through higher education.">
 <link rel="icon" href="images/favicon.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Sen:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Sen:wght@400;500;600&display=swap">
 <style>
 :root{--bg:#fbfcfa;--ink:#16222d;--muted:#51606d;--line:#d9e1e6;--tint:#eef5fa;--navy:#0a3358;--blue:#0b6fbf;--green:#2db34a;--lime:#8dc63f;
---serif:"Sen",system-ui,-apple-system,"Segoe UI",sans-serif;--sans:"Roboto",system-ui,-apple-system,"Segoe UI",sans-serif;
+--serif:"Sen","Noto Sans Malayalam",system-ui,-apple-system,"Segoe UI",sans-serif;--sans:"Roboto","Noto Sans Malayalam",system-ui,-apple-system,"Segoe UI",sans-serif;
 box-sizing:border-box;padding-top:0;padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1821;--ink:#e8eef2;--muted:#a3b2bd;--line:#26384a;--tint:#112535;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#0d1821;--ink:#e8eef2;--muted:#a3b2bd;--line:#26384a;--tint:#112535;color-scheme:dark}
@@ -126,9 +126,9 @@ dd{margin:0 0 1.1rem;font-weight:600;font-size:1.1rem}
 .cinfo dd{margin:0;font-weight:500;font-size:1.05rem}
 .contact dl a{text-decoration:none;border-bottom:1px solid var(--blue)}
 .contact .cbtns{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--line)}
-.contact .btn{border-color:var(--blue);color:var(--blue)}
+.contact .btn{border-color:var(--blue);color:var(--blue);background:transparent}
 .contact .btn:hover{background:var(--blue);color:#fff}
-.contact .cbtns .btn{padding:.4rem 1.05rem;font-size:.9rem;font-weight:500;border-width:1.5px}
+.contact .cbtns .btn{padding:.4rem 1.05rem;font-size:.9rem;font-weight:500;border-width:1.5px;transition:background-color .15s,color .15s}
 .contact .cbtns .btn-icon{display:inline-flex;align-items:center;gap:.45rem}
 .btn-icon svg{width:16px;height:16px;flex:0 0 auto}
 
@@ -142,6 +142,26 @@ footer p{margin:0;font-size:.95rem}
 footer .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;align-items:start;padding-bottom:2rem;margin-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.18);color:#fff;font-weight:500}
 footer .facts span{display:block;font-size:.9rem;font-weight:400;color:#9fb6c8;margin-bottom:.15rem}
 footer .flinks{display:flex;gap:1.25rem}footer .flinks a{color:#cfe0ee}
+
+.about-drops{max-width:920px;margin:2rem auto 0;display:grid;gap:.9rem;text-align:left}
+.about-drop{margin:0}
+.about-drop-btn{display:inline-flex;align-items:center;gap:.65rem;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:.75rem 1.45rem;font:600 1rem var(--serif);cursor:pointer;box-shadow:0 8px 20px rgba(10,51,88,.14)}
+.about-drop-btn:hover{background:var(--blue)}
+.about-drop-chev{transition:transform .25s ease;font-size:.9rem}
+.about-drop-btn[aria-expanded="true"] .about-drop-chev{transform:rotate(180deg)}
+.about-drop-panel[hidden]{display:none}
+.about-drop-panel{margin-top:1.25rem}
+.about-drop-lead{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--navy);margin:0 0 1.4rem;max-width:none}
+:root[data-theme="dark"] .about-drop-lead{color:#9be15d}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .about-drop-lead{color:#9be15d}}
+.tl-boxes{position:relative;display:grid;gap:1.5rem}
+.tl-boxes::before{content:"";position:absolute;top:24px;bottom:24px;left:22px;width:2px;background:var(--line);z-index:0}
+.tl-box{position:relative;z-index:1;display:grid;grid-template-columns:46px minmax(0,1fr);gap:1.25rem;align-items:start;background:var(--tint);border:1px solid var(--line);border-radius:16px;padding:clamp(1.25rem,2.8vw,1.85rem);box-shadow:0 10px 26px rgba(10,51,88,.07)}
+.tl-badge{width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto;box-shadow:0 4px 12px rgba(11,111,191,.25)}
+.tl-badge svg{width:22px;height:22px}
+.tl-content h3{font-size:clamp(1.15rem,2.1vw,1.4rem);margin-bottom:.75rem;color:var(--ink)}
+.tl-content p{margin:0 0 .9rem;max-width:none;font-size:1rem;line-height:1.75;color:var(--ink)}
+.tl-content p:last-child{margin-bottom:0}
 
 .hvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .hfade{position:absolute;inset:0;z-index:1;background:#000;opacity:0;pointer-events:none;transition:opacity .55s ease}.hfade.on{opacity:1}
@@ -159,13 +179,15 @@ nav a{display:inline-block}
 .gal{grid-template-columns:1fr 1fr}
 footer .facts{grid-template-columns:1fr 1fr}
 }
+@media (max-width:640px){
+.tl-boxes::before{left:19px}
+.tl-box{grid-template-columns:40px minmax(0,1fr);gap:.9rem;padding:1.15rem}
+.tl-badge{width:40px;height:40px}
+.tl-badge svg{width:19px;height:19px}
+}
 @media (prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
-header,body::before,.card img,.card .desc,.hfade{transition:none}
-nav a.lang-switch{border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:.3rem .85rem;font-size:.88rem}
-nav a.lang-switch:hover{background:rgba(255,255,255,.15);border-bottom-color:rgba(255,255,255,.55)}
-html.scrolled nav a.lang-switch{border-color:var(--line);color:var(--ink)}
-html.scrolled nav a.lang-switch:hover{background:var(--tint);border-bottom-color:var(--line)}
+header,body::before,.card img,.card .desc,.hfade,.contact .cbtns .btn,.about-drop-chev{transition:none}
 .hvid,.hfade{display:none}
 .hero{background:#000 url(images/hero-2.jpg) center/cover no-repeat}
 }
@@ -185,7 +207,6 @@ html.scrolled nav a.lang-switch:hover{background:var(--tint);border-bottom-color
 <li><a href="#admission">Admission</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a class="give" href="#give">Give</a></li>
-<li><a class="lang-switch" href="ar.html" lang="ar">العربية</a></li>
 </ul>
 </nav>
 </div>
@@ -211,6 +232,129 @@ html.scrolled nav a.lang-switch:hover{background:var(--tint);border-bottom-color
 <div class="wrap about">
 <h2>Building a generation of knowledge, character, and purpose</h2>
 <p class="lead">Sa’ada Academy moulds a morally responsible generation and uplifts the poor and needy by providing higher education and support through its extensive systems.</p>
+
+<div class="about-drops">
+  <div class="about-drop">
+    <button type="button" class="about-drop-btn" aria-expanded="false" aria-controls="melmuri-panel">
+      <span>Melmuri</span>
+      <span class="about-drop-chev" aria-hidden="true">▾</span>
+    </button>
+
+    <div id="melmuri-panel" class="about-drop-panel" hidden>
+      <h3 class="about-drop-lead">മേൽമുറി ഗ്രാമം; നന്മയുടെ വിളനിലം</h3>
+
+      <div class="tl-boxes">
+        <article class="tl-box">
+          <div class="tl-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg>
+          </div>
+          <div class="tl-content">
+            <h3>പ്രാരംഭവും പഠന പശ്ചാത്തലവും (1983)</h3>
+            <p>1983 ഫെബ്രുവരി ഇരുപത്തിയേഴിനാണ് എട്ട് മുതഅല്ലിമുകളുമായി വെങ്ങാട് മേൽ മുറിയിൽ മുദരിസായി സേവനം തുടങ്ങുന്നത്. സ്വന്തം നാടായ എടയൂർ, പാലക്കാട് ജന്നത്തുൽ ഉലൂം അറബിക്കോളേജ്, കാസർകോട് മാലിക് ദീനാർ ജുമാമസ്ജിദ് എന്നിവിടങ്ങളിലായി 12 വർഷത്തെ ദർസ് പഠനവും ശേഷം 2 വർഷം നന്തി ദാറുസ്സലാം അറബിക് കോളേജിൽ ഉപരിപഠന ത്തിനും ശേഷമാണ് വെങ്ങാട് സേവനം തുടങ്ങുന്നത്. കക്കട്ടിപ്പുറം അബ്ദുറഹ്മാൻകുട്ടി മുസ്ലിയാർ, എടയൂർ മരക്കാർ മുസ്ലിയാർ, ശൈഖുനാ ഇ.കെ ഹസൻ മുസ്ലിയാർ, ശംസുൽ ഉലമ ഇ.കെ അബൂബക്കർ മുസ്ലിയാർ, നെല്ലിക്കുത്ത് ഇസ്മായിൽ മുസ്ലിയാർ എന്നിവർ പ്രധാന ഉസ്താദുമാരാണ്. കക്കട്ടിപ്പുറം അബൂബക്കർ മുസ്ലിയാർ, ഇല്ലിക്കോട് ശൈഖുനാ മമ്മദ് മുസ്ലിയാർ, കുറ്റിപ്പുറം അബ്ദുല്ല മുസ്ലിയാർ, ചാവക്കാട് ഹിബതുല്ലാഹി തങ്ങൾ, താജുശ്ശരീഅഃ ശിറിയ അലിക്കുഞ്ഞി മുസ്ലിയാർ എന്നിവർ പ്രധാന ശൈഖുമാരാണ്.</p>
+          </div>
+        </article>
+
+        <article class="tl-box">
+          <div class="tl-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="tl-content">
+            <h3>ദർസ് സേവനവും ശിഷ്യസമ്പത്തും</h3>
+            <p>43 വർഷത്തെ സേവന കാലം മുഴുവൻ വെങ്ങാട് മേൽമുറി മഹല്ലിൽ ആണ് ചിലവഴിച്ചത്. അല്ലാഹുവിന്റെ അമേയമായ അനുഗ്രഹത്താൽ ദർസിനു ഒരു മുടക്കവും വരാതെ മുന്നോട്ടു പോകുന്നത് മുതഅല്ലിമീങ്ങളെ അതിരറ്റ് സ്നേഹിക്കുന്ന മഹല്ലിലെ നിഷ്കളങ്കരായ രക്ഷിതാക്കളുടെ സഹകരണത്തോടെയാണ്. ഇതിന കം അറുപതിലധികം ബിരുദധാരി കളായ പണ്ഡിതരെ സമൂഹത്തിനു സമർപ്പിക്കാൻ കഴിഞ്ഞു എന്നതിൽ വലിയ ചാരിതാർത്ഥ്യമുണ്ട്. ശൈഖുനാ</p>
+            <p>സുൽത്താനുൽ ഉലമ കാന്തപുരം ഉസ്താദ് നേതൃത്വം നൽകുന്ന കാരന്തൂർ ജാമിഅഃ മർകസിലും, ഫാറൂഖ് നഈമി അൽ ബുഖാരി നേതൃത്വം നൽകുന്ന കൊല്ലം മഖ്ദൂമിയ കോളേജിലുമടക്കം കേരളത്തിന്റെ വിവിധ ഭാഗങ്ങളിൽ മുദരിസ്, ഖതീബ്, മുഅല്ലിം, ദഅവ രംഗങ്ങളിലും, സംഘടനാ രംഗത്തും സജീവമാണ് ശിഷ്യന്മാരെല്ലാവരും എന്നത് ഏറെ സന്തോഷകരമാണ്.</p>
+          </div>
+        </article>
+
+        <article class="tl-box">
+          <div class="tl-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+          </div>
+          <div class="tl-content">
+            <h3>മഹല്ല് പ്രവർത്തനങ്ങളും നാലു പതിറ്റാണ്ടിന്റെ ഖിദ്മത്തും</h3>
+            <p>ഹിജ്റാബ്ദ കണക്കിൽ 40 വർഷവും സേവനം ചെയ്തത് വെങ്ങാട് മേൽമുറിയിലാണ്. ശൈഖുനാ മമ്മദ് മുസ്ലിയാരുടെ നിയന്ത്രണത്തിലും തർബിയത്തിലു മായി 12 വർഷം കഴിഞ്ഞുകൂടാനായത് മഹാഭാഗ്യമായി കാണുന്നു. വെങ്ങാട്-മേൽമുറി മഹല്ലിലെ പള്ളികൾ, മദ്റസകൾ എന്നിവയുടെ നിർമ്മാണങ്ങളിലെല്ലാം സജീവമായി തന്നെ ഇടപെടാൻ കഴിഞ്ഞു. പഠന ക്ലാസുകൾ, പരമ്പര പ്രഭാഷണങ്ങൾ വഴി നാട്ടിലെ സാധാരണക്കാർക്ക് അറിവു പകർന്നു കൊടുക്കാൻ ധാരാളം അവസരങ്ങൾ ലഭിച്ചു. നാട്ടുകാരുടെ സുഖ ദുഃഖങ്ങളിൽ അവർക്കൊപ്പം ഒരു കുടുംബാംഗത്തെ പോലെ ഇടപെടാൻ കഴിഞ്ഞതിനാൽ എന്റെ കുടുംബ കാര്യങ്ങളിലും സജീവമായ സഹകരണവും വളരെ വലിയ സാമ്പത്തിക സഹായങ്ങളും ലഭിച്ചത് മറക്കാൻ കഴിയാത്ത അനുഭവങ്ങളാണ്.</p>
+            <p>നാലു പതിറ്റാണ്ടിന്റെ ദീനീ ഖിദ്മത്തിന് ലഭിച്ച അവസരം നഷ്ടപ്പെടാതിരിക്കാൻ പരമാവധി</p>
+            <p>ക്ഷമിച്ചും, സഹിച്ചും ഭൗതിക താൽപര്യങ്ങൾ ഒന്നും ആവശ്യപ്പെടാതെ സേവനമനുഷ്ഠിച്ച കൊണ്ട് തന്നെയാണ് ഇന്നും വെങ്ങാട് തന്നെ ദീനീ ഖിദ്മത്തിലായി മുന്നോട്ട് ഗമിക്കാൻ കഴിയുന്നത്.</p>
+          </div>
+        </article>
+
+        <article class="tl-box">
+          <div class="tl-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-4.35-9-8.5C1.1 9.3 3.2 5 7.5 5c2.2 0 3.8 1.2 4.5 2.4C12.7 6.2 14.3 5 16.5 5 20.8 5 22.9 9.3 21 12.5c-2.5 4.15-9 8.5-9 8.5z"/></svg>
+          </div>
+          <div class="tl-content">
+            <h3>പഞ്ചായത്ത് പടി സുന്നീ ജുമാഅ മസ്ജിദിലേക്കുള്ള മാറ്റവും മുന്നേറ്റവും</h3>
+            <p>ദർസിനോടും, മുതഅല്ലിമീങ്ങളോടും, ദീനിയായ സേവനങ്ങളോടും പുച്ഛവും, പരിഹാസവും നിറഞ്ഞ പെരുമാറ്റങ്ങൾ ചിലരിൽ നിന്നും പ്രകടമായപ്പോഴാണ് മഹല്ലിലെ വേണ്ടപ്പെട്ടവരുടെയും അഭിപ്രായവും കൂടി പരിഗണിച്ച് വെങ്ങാട്- മേൽമുറി മഹല്ലിൽ നിന്ന് മാറാൻ തീരുമാനിച്ചത്.</p>
+            <p>പക്ഷേ നാലു പതിറ്റാണ്ട് കാലം ദീനീ ചൈതന്യം അനുഭവിച്ചറിഞ്ഞ ഗുണകാംക്ഷികളും അന്നും ഇന്നും ദർസിനെയും, ഇൽമിനെയും, മുതഅല്ലിമുകളെയും സ്നേഹിക്കുന്ന രക്ഷിതാക്കളുടെ നിരന്തരമായ അഭിപ്രായം പരിഗണിച്ച് വെങ്ങാട് പഞ്ചായത്ത് പടി സുന്നീ ജുമാഅ മസ്ജിദിലേക്ക് 2019ൽ ദർസ് മാറേണ്ടി വന്നു. ആരോടും വിദ്വേഷമില്ലാതെ ഒരു അവകാശവാദവും ഉന്നയിക്കാതെ ക്ഷമയോടെ ത്യാഗ മനസ്സുമായി ഐക്യത്തോടെ നീങ്ങിയപ്പോൾ നാലു വർഷം കൊണ്ട് വലിയ മുന്നേറ്റങ്ങൾ സൃഷ്ടിക്കാൻ സാധിച്ചു. പഞ്ചായത്ത് സുന്നീ മഹല്ല് ജമാഅത്ത് ദീനീ സേവന വഴിയിൽ അതിന്റെ ജൈത്രയാത്രയിലാണ്. അനിവാര്യമായി വന്നപ്പോൾ മദ്ഫൻ (ഖബർസ്ഥാൻ) സംവിധാനം ഉൾപ്പെടെ ഒരുക്കി മുന്നേറുകയാണ്.</p>
+            <p>ഒപ്പം നിന്ന് അകമഴിഞ്ഞ സഹായ സഹകരണങ്ങൾ നൽകുന്ന നാട്ടുകാരെയും, നേതൃത്വ രംഗത്ത് കാവലായി നിലയംഉറപ്പിച്ച കമ്മിറ്റി ഭാരവാഹികളെയും, മുതഅല്ലിമുകൾക്ക് ഭക്ഷണ- സഹായ-സഹകരണങ്ങൾ നൽകുന്ന എല്ലാവരെയും നാഥൻ അനുഗ്രഹിക്കട്ടെ... ആമീൻ.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-drop">
+    <button type="button" class="about-drop-btn" aria-expanded="false" aria-controls="mammad-musliyar-panel">
+      <span>Mammad Musliyar</span>
+      <span class="about-drop-chev" aria-hidden="true">▾</span>
+    </button>
+
+    <div id="mammad-musliyar-panel" class="about-drop-panel" hidden>
+      <h3 class="about-drop-lead">ശൈഖുനാ മമ്മദ് മുസ്ലിയാർ; മേൽമുറി ദേശത്തിന്റെ സൗഭാഗ്യം - മുഹമ്മദ് ആഷിഖ് അദനി</h3>
+
+      <div class="tl-boxes">
+        <article class="tl-box">
+          <div class="tl-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg>
+          </div>
+          <div class="tl-content">
+            <h3>അനുഗ്രഹീത സാന്നിധ്യവും ബാല്യകാല വിജ്ഞാനയാത്രയും</h3>
+            <p>അല്ലാഹുവിന്റെ ഇഷ്ടദാസരുടെ സാന്നിധ്യം വലിയൊരു അനുഗ്രഹമാണ്. സുഷ്മ്ഠാമായ അല്ലാഹു വിനുവേണ്ടി സ്വാന്തത്തെ മറന്ന് ശരീരേഛകളോട് സമരം ചെയ്ത് സാമീപ്യം കരസ്ഥമാക്കിയവർക്ക് അവൻ നൽകുന്ന ആദരവാണത്.</p>
+            <p>ഈ ഗണത്തിൽ നമ്മുടെ വെങ്ങാട് ദേശത്തിന് അല്ലാഹു കനിന്തരുളിയ ദാനമാണ് മഹാനായ ശൈഖുനാ മുഹമ്മദ് മുസ്ലിയാർ എന്ന നമ്മുടെ മോല്ല്യേരുപ്പം. ആഴമേറിയ അറിവും അറിവനുസരിച്ചുള്ള വിശുദ്ധ ജീവിതവും ആത്മസംസ്കരണവും മെല്ലാം ഒത്തുചേർന്ന ഉന്നത ശീർഷനായീരുന്നു മഹാനർ. ചിലരുടെ ജീവിതം ആയിരങ്ങളുടെ ഉപദേശങ്ങളെക്കാൾ ഫലം ചെയ്യുമെന്ന് മഹായാർ പറഞ്ഞതിന്റെ പകർപ്പായിരുന്നു അവിടുത്തെ കാലം. നിറഞ്ഞ വിനയം സ്ഫുരിക്കുന്ന ഒച്ചപ്പാടുകളില്ലാത്ത ജീവിതം കണ്ട് സൽവഴി പ്രാപിച്ചവർ ഏറെയാണ്.</p>
+            <p>നല്ലൊരു കർഷക കുടുംബത്തിൽ ജനിച്ച ശൈഖുനാക്ക്, ഒരു ദിവസം ആടുമേച്ചുകൊണ്ടിരിക്കുന്നതിനിടയിലാണ് ഒരു ഉൾവിളിയെന്നോണം ഖുർആൻ പഠിക്കാനുള്ള ആഗ്രഹം പൂവിടുന്നത്. ആഗ്രഹ സഫലീകരണത്തിനായി തന്റെ പതിനാലാമത്തെ വയസ്സിൽ ആരുമറിയാതെ വീടുവിട്ടിറങ്ങി. പിതാവ് കുഞ്ഞിയുമ്മുക്കയും കുടുംബവും മകനെ അന്വേഷിച്ച് ഇറങ്ങി. ഒടുവിൽ ചരിത്രപ്രസിദ്ധമായ പൊന്നാനി വലിയ പള്ളിയിലാണ് മഹാനവർകളെ</p>
+            <p>കണ്ടെത്തിയത്. ഖുർആൻ പഠനത്തിനുള്ള തന്റെ മകന്റെ അമിതാവേശം പിതാവിനെ അഭിമാന പുളകിതനാക്കി. മകന്റെ അഭിലാഷം നിറവേറ്റാൻ ആ പിതാവ് സമ്മതവും നൽകി. ഖുർആൻ പഠനത്തിൽ ആരംഭിച്ച ഈ വിജ്ഞാനയാത്ര ഇരുപത് വർഷം നീണ്ടുനിന്നു. പണ്ഡിത കേസരികളും സൂഫിവര്യന്മാരുമായ പൊന്നാനി ഉളമാക്കളുടെ കീഴിൽ വിവിധ വിജ്ഞാന ശാഖകളിൽ മികച്ച നൈപുണ്യം നേടി. വലിയ സൂഫിഗുരു വായിരുന്ന പയ്യനാട് മമ്മദ് മുസ്ലിയാർ ആയിരുന്നു നമ്മുടെ ശൈഖുനയുടെ പ്രധാന ഉസ്താദ്.</p>
+          </div>
+        </article>
+
+        <article class="tl-box">
+          <div class="tl-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="tl-content">
+            <h3>അറിവിന്റെ ആഴവും മാതൃകാപരമായ ജീവിതക്രമവും</h3>
+            <p>രണ്ടു പതിറ്റാണ്ട് നീണ്ടുനിന്ന പഠന കാലത്ത് വിവിധ വിജ്ഞാന ശാഖകളിൽ സമുദ്ര സമാന വിജ്ഞാനം നേടാൻ മഹാനവർകൾക്ക് സാധിച്ചു. സമകാലികരായ വലിയ പല പണ്ഡിതന്മാരും കിതാബുകൾ സംബന്ധമായ പല ചർച്ചകൾക്കും തീർപ്പുകൾക്കും വേണ്ടി മഹാനരെത്തേടി നമ്മുടെ നാട്ടിൽ വരുന്നത് പതിവായിരുന്നു. ഓതി പഠിച്ച കാലം മുതൽ വഫാത്ത് വരെയും കിതാബുകളിലെ പല വലിയ ഉദാഹരണങ്ങളും വ്യാഖ്യാനങ്ങളുമെല്ലാം മഹാനവർകൾക്ക് ഹൃദ്യസ്ഥമായിരുന്നു.</p>
+            <p>പഠിച്ചെടുത്ത അറിവുകൾ ജീവിത പാതയിൽ കൊണ്ടുനടക്കുക എന്നതാണല്ലോ അല്ലാഹു പൊരുത്തപ്പെടുന്ന പണ്ഡിതരുടെ ഏറ്റവും വലിയ ലക്ഷണം. അത്തരത്തിൽ തന്റെ ജീവിതം ക്രമപ്പെടു ത്താൻ മഹാനവർകൾ കണിശത പുലർത്തി. പ്രത്യേകിച്ച് അഞ്ച് വഖ്ത് നിസ്</p>
+            <p>കാരവും മറ്റുപോലെ ജമാഅത്തായി നിസ്കരിക്കുകയും നിസ്കരിക്കണമെന്ന് മറ്റുള്ളവരെ ഉപദേശിക്കുകയും കൽപ്പിക്കുകയും ചെയ്യുമായിരുന്നു.</p>
+          </div>
+        </article>
+
+        <article class="tl-box">
+          <div class="tl-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+          </div>
+          <div class="tl-content">
+            <h3>സാന്ത്വന സേവനവും നാടിന്റെ ദീനീ മുന്നേറ്റവും</h3>
+            <p>വിജ്ഞാന പ്രസരണ രംഗത്ത് സജീവമായ തോടൊപ്പം സാന്ത്വനരംഗത്തും ശൈഖുനാ നിറഞ്ഞു നിന്നു. വിവിധ രോഗങ്ങൾ കൊണ്ടും മറ്റും പ്രയാസം അനുഭവിക്കുന്നവർക്ക് തന്റെ ആത്മീയ ചികിത്സയിലൂടെയും ആയുർവേദ മരുന്ന് കൂട്ടുകളിലൂടെയും ശൈഖുനാ ആശ്വാസം നൽകി. വിഷമംബസദമായ ചികിത്സകൾക്ക് വേണ്ടിയും പലരും മഹാനെ സമീപിച്ച് അത്ഭുത ഫലം നേടി. വീടിനും കിണറിനും സ്ഥാനം നിർണയിക്കാനും വിശേഷങ്ങൾക്ക് തീയതി കുറിക്കാനും ശൈഖുനാ തന്നെയായിരുന്നു നമ്മുടെയും പരിസര നാട്ടുകാരുടെയും ആശ്രയം. നമ്മുടെ നാട്ടിൽ പള്ളിയും ദർസും സ്ഥാപിച്ചതടക്കം എല്ലാ ദീനിയായ പുരോഗതികൾക്കും കാർമ്മികത്വം വഹിച്ചത് മഹാനവർകളാണ്.</p>
+          </div>
+        </article>
+
+        <article class="tl-box">
+          <div class="tl-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-4.35-9-8.5C1.1 9.3 3.2 5 7.5 5c2.2 0 3.8 1.2 4.5 2.4C12.7 6.2 14.3 5 16.5 5 20.8 5 22.9 9.3 21 12.5c-2.5 4.15-9 8.5-9 8.5z"/></svg>
+          </div>
+          <div class="tl-content">
+            <h3>കറാമത്തുകളും വഫാത്തും</h3>
+            <p>അല്ലാഹുവിന്റെ പ്രീതി മാത്രം കാംക്ഷിച്ച് ജീവിക്കുന്ന ഔലിയ മഹത്തുക്കളിലൂടെ അവരുടെ ജീവിതകാലത്തും ശേഷവും അല്ലാഹു വെളിപ്പെടുത്തുന്ന അസാധാരണ സംഭവങ്ങളുണ്ട്. അതിനെയാണ് കറാമത്ത് എന്ന് വിളിക്കുന്നത്. മഹാനായ ശൈഖുനായുടെ കറാമത്തുകളും ബറക്കത്തുകളും നിരന്തരം അനുഭവിച്ചുകൊണ്ടിരിക്കുന്നവരാണ് നമ്മൾ.</p>
+            <p>ശൈഖുനായുടെ സമകാലികരായ പർളുതം ഉളമാ മഹത്തുക്കൾ ശൈഖുനായെ കാണുകയും ആത്മീയ ഉപദേശങ്ങളും ദിക്റുകളും സ്വീകരിക്കുകയും ദുആ ചെയ്യിപ്പിക്കുകയും ചെയ്തു. വലിയുല്ലാഹി കക്കിട്ടിപ്പുറം ഉസ്താദ്, ശംസുൽ ഉലമ ഇ.കെ. ഉസ്താദ്,</p>
+            <p>സുൽത്താനുൽ ഉലമാ എ.പി. ഉസ്താദ് ഉൾപ്പെടെ കനപ്പെട്ട ആലിമീങ്ങൾ, നമ്മുടെ ശൈഖുനായുമായി സമ്പർക്കം പുലർത്തിയ പ്രമുഖരിൽ ചിലരാണ്.</p>
+            <p>വിശുദ്ധദീൻ പഠിപ്പിച്ച സദ്ഗുണങ്ങളെല്ലാം മേളിച്ച, സാത്വികനും സൽസ്വഭാവിമുമായ ആ മഹാനുഭാവന്റെ പ്രയത്നത്തിന്റെയും സാന്നിധ്യ ത്തിന്റെയും ഫലമാണ് നമ്മുടെ നാട്ടിലും പരിസ രത്തും നിലനിൽക്കുന്ന ആത്മീയ ചൈതന്യമെല്ലാം.</p>
+            <p>മാതൃകാപരവും ത്യാഗപൂർണ്ണ വുമായ ആ മഹദ്ജീവിതം നമ്മോട് വിടചൊല്ലിയിട്ട് മുപ്പത് വർഷമായി. 1995 മാർച്ച് 6 (ഹിജ്റ 1415 ശവ്വാൽ 4) തിങ്കളാഴ്ച തന്റെ എൺപത്തിമൂന്നാം വയസ്സിലാണ് മഹാൻ യാത്രയായത്.</p>
+            <p>ശൈഖുനാ കാണിച്ചുതന്ന പാതിയിലൂടെ സഞ്ചരിച്ച് ഇരുലോക വിജയം വരിക്കാൻ അല്ലാഹു നമുക്ക് സൗഭാഗ്യം നൽകട്ടെ.. ആമീൻ</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 </section>
 
@@ -392,6 +536,14 @@ var d=document.documentElement,b=document.querySelector('.menu'),n=document.getE
 b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
 document.querySelectorAll('.card').forEach(function(c){var t=c.querySelector('.ttl');t.addEventListener('click',function(){var o=c.classList.toggle('open');t.setAttribute('aria-expanded',o)})});
+document.querySelectorAll('.about-drop-btn').forEach(function(btn){
+var panel=document.getElementById(btn.getAttribute('aria-controls'));
+btn.addEventListener('click',function(){
+var open=btn.getAttribute('aria-expanded')==='true';
+btn.setAttribute('aria-expanded',String(!open));
+if(panel)panel.hidden=open;
+});
+});
 if(document.body.hasAttribute('data-solid')){d.classList.add('scrolled')}
 else{var s=function(){d.classList.toggle('scrolled',window.scrollY>40)};window.addEventListener('scroll',s,{passive:true});s()}
 var v=document.querySelector('.hvid'),fd=document.querySelector('.hfade');if(v){v.muted=true;var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});if(fd){(function tick(){var t=v.duration;if(t&&!v.paused){fd.classList.toggle('on',t-v.currentTime<0.55)}requestAnimationFrame(tick)})()}}
